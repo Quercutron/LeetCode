@@ -1,0 +1,20 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        //求出x的回文数比较一下
+        int num=0;
+        int temp=x;
+        if(x>=0){
+            while(x!=0){
+                int ge=x%10;
+                x=x/10;
+                num=num*10+ge;
+            }
+            if(num==temp){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        return false;
+    }
+}
